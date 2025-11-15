@@ -1,0 +1,58 @@
+{
+  "name": "file_operations",
+  "version": "1.0.0",
+  "description": "File system operations for TaskFlowr automation",
+  "tools": [
+    {
+      "name": "read_file",
+      "description": "Read contents from a file",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file_path": {
+            "type": "string",
+            "description": "Path to the file to read"
+          }
+        },
+        "required": ["file_path"]
+      }
+    },
+    {
+      "name": "write_file",
+      "description": "Write content to a file",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "file_path": {
+            "type": "string",
+            "description": "Path where file will be written"
+          },
+          "content": {
+            "type": "string",
+            "description": "Content to write to file"
+          },
+          "mode": {
+            "type": "string",
+            "enum": ["write", "append"],
+            "default": "write"
+          }
+        },
+        "required": ["file_path", "content"]
+      }
+    },
+    {
+      "name": "list_files",
+      "description": "List files in a directory",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "directory_path": {
+            "type": "string",
+            "description": "Path to directory to list"
+          }
+        },
+        "required": ["directory_path"]
+      }
+    }
+  ]
+}

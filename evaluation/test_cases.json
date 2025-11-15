@@ -1,27 +1,51 @@
-[
-  {
-    "id": "checklist_generation",
-    "input": "Create a checklist for onboarding a new project manager.",
-    "expected": "Checklist with steps"
-  },
-  {
-    "id": "summary_generation",
-    "input": "Summarize this update: We closed Q3 with 14% growth...",
-    "expected": "Human-friendly summary"
-  },
-  {
-    "id": "report_workflow",
-    "input": "Create a weekly operational report template.",
-    "expected": "Structured template"
-  },
-  {
-    "id": "email_draft",
-    "input": "Draft an email announcing the new workflow changes.",
-    "expected": "Email format"
-  },
-  {
-    "id": "multi_step",
-    "input": "Generate a checklist for performance review and draft an announcement.",
-    "expected": "Two-part combined output"
+{
+  "test_cases": [
+    {
+      "id": "TC001",
+      "name": "Complex Sales Report",
+      "input": "Create comprehensive Q4 2024 sales report including: monthly sales figures, top 5 performing products, regional performance breakdown, growth metrics compared to Q3, executive summary for leadership team, and draft email to sales team with key findings and action items.",
+      "expected_outputs": ["structured_data", "summary", "email", "checklist"],
+      "category": "hybrid",
+      "difficulty": "high"
+    },
+    {
+      "id": "TC002",
+      "name": "Team Onboarding Package",
+      "input": "Create complete onboarding package for new software engineers: 30-60-90 day checklist, technical setup procedures with step-by-step instructions, team introduction email template, learning path for first month with resources, and manager guidance document for effective onboarding.",
+      "expected_outputs": ["checklist", "email", "procedures", "workflow"],
+      "category": "automation",
+      "difficulty": "medium"
+    },
+    {
+      "id": "TC003", 
+      "name": "Operations Management",
+      "input": "Generate weekly operations checklist for customer support team: daily monitoring tasks with priorities, weekly reporting requirements with templates, quality assurance checks with evaluation criteria, team coordination meeting agenda, and performance metrics review process. Also draft team announcement about implementing this new process.",
+      "expected_outputs": ["checklist", "announcement", "procedures", "workflow"],
+      "category": "hybrid", 
+      "difficulty": "medium"
+    },
+    {
+      "id": "TC004",
+      "name": "Executive Briefing",
+      "input": "Prepare executive briefing for quarterly business review: market analysis summary, competitive landscape overview, key performance indicators with trends, strategic recommendations, and risk assessment. Format for C-level presentation with bullet points and clear takeaways.",
+      "expected_outputs": ["summary", "structured_data", "procedures"],
+      "category": "communication",
+      "difficulty": "high"
+    },
+    {
+      "id": "TC005",
+      "name": "Project Launch",
+      "input": "Create project launch kit for new marketing campaign: project timeline with milestones, team roles and responsibilities, communication plan with stakeholder updates, risk mitigation checklist, and launch announcement email for entire company.",
+      "expected_outputs": ["checklist", "email", "workflow", "announcement"],
+      "category": "hybrid",
+      "difficulty": "medium"
+    }
+  ],
+  "evaluation_criteria": {
+    "completeness": "All expected output types are generated",
+    "relevance": "Outputs directly address input requirements", 
+    "structure": "Outputs are well-organized and actionable",
+    "professionalism": "Content maintains business standards",
+    "efficiency": "Reasonable response time and resource usage"
   }
-]
+}

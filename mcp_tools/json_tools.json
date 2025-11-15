@@ -1,0 +1,77 @@
+{
+  "name": "json_operations",
+  "version": "1.0.0",
+  "description": "JSON processing tools for structured data handling",
+  "tools": [
+    {
+      "name": "parse_json",
+      "description": "Parse JSON string into structured data",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "json_string": {
+            "type": "string",
+            "description": "JSON string to parse"
+          }
+        },
+        "required": ["json_string"]
+      }
+    },
+    {
+      "name": "validate_json",
+      "description": "Validate JSON structure against schema",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "json_string": {
+            "type": "string",
+            "description": "JSON string to validate"
+          },
+          "schema": {
+            "type": "object",
+            "description": "JSON schema for validation"
+          }
+        },
+        "required": ["json_string"]
+      }
+    },
+    {
+      "name": "transform_json",
+      "description": "Transform JSON data using mapping rules",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "input_json": {
+            "type": "object",
+            "description": "Input JSON data"
+          },
+          "transform_rules": {
+            "type": "object",
+            "description": "Transformation rules to apply"
+          }
+        },
+        "required": ["input_json", "transform_rules"]
+      }
+    },
+    {
+      "name": "generate_json_template",
+      "description": "Generate JSON template for common business objects",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "template_type": {
+            "type": "string",
+            "enum": ["report", "checklist", "workflow", "user_story"],
+            "description": "Type of template to generate"
+          },
+          "fields": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "Specific fields to include"
+          }
+        },
+        "required": ["template_type"]
+      }
+    }
+  ]
+}

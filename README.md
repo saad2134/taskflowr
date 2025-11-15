@@ -19,6 +19,36 @@
 - **Track:** Enterprise Agents   
 - **Category:** Software
 
+
+## 🎯 Execution Instructions for Judges
+
+### Primary Evaluation Method: Kaggle Notebook
+
+**Judges should start here:** 
+1. Go to the Kaggle Notebook: `notebooks/taskflowr_kaggle_notebook.ipynb`
+2. The notebook contains complete, runnable demonstrations
+3. All dependencies are pre-configured for Kaggle environment
+4. Shows live agent interactions and outputs
+
+### Key Things Judges Will See:
+
+1. **Multi-agent coordination in action**
+2. **Structured business outputs** (checklists, reports, emails)
+3. **ADK features demonstrated** (tools, memory, A2A communication)
+4. **Enterprise-ready workflows**
+5. **Comprehensive evaluation results**
+
+### Running Locally (Alternative):
+
+```bash
+# Quick start
+git clone https://github.com/saad2134/taskflowr
+cd taskflowr
+pip install -r requirements.txt
+export GOOGLE_API_KEY=your_key_here
+python -m agent.coordinator
+```
+
 ## 💡 About the Project
 
 ### ✨ Key Features
@@ -130,10 +160,6 @@ taskflowr/
 │── notebooks/
 │   └── taskflowr_kaggle_notebook.ipynb
 │
-│── diagrams/
-│   ├── architecture.png
-│   └── workflow_sequence.png
-│
 │── evaluation/
 │   ├── test_cases.json
 │   ├── evaluator.py
@@ -158,64 +184,42 @@ taskflowr/
 
 ## 🚀 Quick Start
 
-- Install dependencies
-- Run coordinator
-- Trigger workflow examples
-
-## Agent Prompts 
-
-### 📌 Coordinator Agent Prompt
+### Prerequisites
 
 ```
-You are the Coordinator Agent for TaskFlowr. 
-Your job is to interpret user instructions, break them into subtasks, 
-decide which agent should perform each subtask, and assemble the final result.
+# Clone the repository
+git clone https://github.com/saad2134/taskflowr
+cd taskflowr
 
-Rules:
-- Always analyze user intent deeply.
-- If a task involves data, structure, parsing, file output, workflows, or logic → send it to the Automation Agent.
-- If a task involves human-readable summaries, emails, announcements, or instructions → send it to the Communication Agent.
-- Maintain session context and reuse prior outputs.
-- Always produce a final, unified deliverable for the user.
-- Include tool calls only when needed and follow ADK constraints.
+# Install dependencies
+pip install -r requirements.txt
+
+# Set up environment variables
+export GOOGLE_API_KEY=your_gemini_api_key_here
 ```
 
-### 📌Automation Agent Prompt
+### Running the System
 
 ```
-You are the Automation Agent for TaskFlowr.
-You handle structured, operational, and data-driven tasks.
+# Method 1: Run the main coordinator
+python -m agent.coordinator
 
-Capabilities:
-- Read/write files via file tools
-- Parse/transform JSON
-- Create checklists, workflows, structured templates
-- Use python tool for computation
-- Produce deterministic, concise outputs
+# Method 2: Run via Kaggle notebook (primary method)
+# Open notebooks/taskflowr_kaggle_notebook.ipynb on Kaggle
 
-Rules:
-- Output must always be structured, machine-friendly, and reliable.
-- Do not write narratives unless asked by the Coordinator.
+# Method 3: Deploy to Vertex AI Agent Engine
+cd deployment
+./start.sh
 ```
 
-### 📌 Communication Agent Prompt
-
-```
-You are the Communication Agent for TaskFlowr.
-You rewrite, summarize, draft emails, prepare briefs, and craft polished human-facing content.
-
-Rules:
-- Maintain clarity and professional tone.
-- Your job is to translate structured outputs into human-friendly communication.
-- Avoid technical language unless requested.
-- Use memory for tone preferences if provided.
-```
+### Detail Deployment Guide
+- See [deployment/](deployment/)'s README for detail guide on running, troubleshooting & deploying the project.
 
 ## 📊 Examples Included
 
-- Sales report generator
-- Team announcement drafts
-- Process checklist generator
+- Sales report generator [examples/example_1_sales_report.md](examples/example_1_sales_report.md)
+- Team announcement drafts [examples/example_2_team_announcement.md](examples/example_2_team_announcement.md) 
+- Process checklist generator [examples/example_3_ops_checklist.md](examples/example_3_ops_checklist.md)  
 
 ## 📊 **Repo Stats**
 
@@ -245,14 +249,9 @@ Rules:
  </picture>
 </a>
 
+## 🔰 Cover Image
 
-## ✨ Icon
-
-* soon
-
-## 🔰 Banner
-
-* soon
+![thumbnail](https://github.com/user-attachments/assets/c152f34c-aca3-435e-a1de-282a120bb8a6)
 
 ---
 
@@ -263,6 +262,5 @@ Rules:
 
 ## 🏷 Tags  
 
-`#WebApp` `#SmartEducation` `#AIinEducation` `#PersonalizedLearning` `#SkillPathways` `#CareerGuidance` `#NSQFIntegration` `#VocationalEducation` `#AIPathGenerator` `#DigitalLearning` `#AdaptiveLearning` `#GamifiedLearning` `#TokenEconomy` `#AIMatching` `#SkillNavigator` `#FutureSkills` `#EdTechIndia` `#SkillForecasting` `#CareerIntelligence` `#MultilingualAI` `#SkillSangam` `#taskflowr` `#SmartIndiaHackathon2025` `#SIH25199`
-
+`#TaskFlowr` `#AIWorkflows` `#AutomationAgent` `#MultiAgentSystems` `#ProductivityTools` `#AgentOrchestration` `#WorkflowAutomation` `#AIAgents` `#SmartOps` `#TaskCoordination` `#AgenticFramework` `#PythonAutomation` `#DeveloperTools` `#OpenSourceAI` `#AIEngineering` `#MCPTools` `#SystemDesign` `#KaggleNotebook` `#EnterpriseAI` 
 

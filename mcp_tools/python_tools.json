@@ -1,0 +1,67 @@
+{
+  "name": "python_operations",
+  "version": "1.0.0",
+  "description": "Safe Python execution for data processing and calculations",
+  "tools": [
+    {
+      "name": "execute_python",
+      "description": "Execute safe Python code for calculations and data processing",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "Python code to execute"
+          },
+          "variables": {
+            "type": "object",
+            "description": "Input variables for the code"
+          }
+        },
+        "required": ["code"]
+      }
+    },
+    {
+      "name": "calculate_metrics",
+      "description": "Calculate business metrics and KPIs",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "metric_type": {
+            "type": "string",
+            "enum": ["growth_rate", "completion_rate", "efficiency", "conversion"],
+            "description": "Type of metric to calculate"
+          },
+          "data": {
+            "type": "object",
+            "description": "Input data for calculation"
+          }
+        },
+        "required": ["metric_type", "data"]
+      }
+    },
+    {
+      "name": "data_analysis",
+      "description": "Perform basic data analysis operations",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "operation": {
+            "type": "string",
+            "enum": ["summary", "filter", "aggregate", "trend"],
+            "description": "Analysis operation to perform"
+          },
+          "data": {
+            "type": "object",
+            "description": "Data to analyze"
+          },
+          "parameters": {
+            "type": "object",
+            "description": "Operation-specific parameters"
+          }
+        },
+        "required": ["operation", "data"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "name": "taskflowr-coordinator",
+  "display_name": "TaskFlowr Coordinator Agent",
+  "description": "Multi-agent workflow automation system for enterprise operations",
+  "model": "gemini-2.0-flash-exp",
+  "system_instruction": "You are the Coordinator Agent for TaskFlowr. Orchestrate workflow between Automation and Communication agents to handle enterprise business operations.",
+  "tools": [
+    {
+      "type": "MCP_TOOL",
+      "name": "file_operations",
+      "config": {
+        "mcp_server": "file-tools",
+        "allowed_operations": ["read", "write", "list"]
+      }
+    },
+    {
+      "type": "MCP_TOOL", 
+      "name": "json_processing",
+      "config": {
+        "mcp_server": "json-tools",
+        "allowed_operations": ["parse", "validate", "transform"]
+      }
+    },
+    {
+      "type": "MCP_TOOL",
+      "name": "python_execution",
+      "config": {
+        "mcp_server": "python-tools", 
+        "allowed_operations": ["execute", "calculate", "analyze"],
+        "safety_level": "restricted"
+      }
+    }
+  ],
+  "safety_settings": [
+    {
+      "category": "HARM_CATEGORY_HARASSMENT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    },
+    {
+      "category": "HARM_CATEGORY_HATE_SPEECH", 
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    },
+    {
+      "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    },
+    {
+      "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+      "threshold": "BLOCK_MEDIUM_AND_ABOVE"
+    }
+  ],
+  "agent_metadata": {
+    "version": "1.0.0",
+    "environment": "production",
+    "capabilities": ["multi_agent_coordination", "workflow_automation", "business_communication"],
+    "supported_use_cases": ["sales_reports", "onboarding", "operations", "executive_briefings"]
+  },
+  "scaling_config": {
+    "min_replicas": 1,
+    "max_replicas": 10,
+    "target_concurrent_requests": 100
+  }
+}
