@@ -1,0 +1,27 @@
+[
+  {
+    "id": "checklist_generation",
+    "input": "Create a checklist for onboarding a new project manager.",
+    "expected": "Checklist with steps"
+  },
+  {
+    "id": "summary_generation",
+    "input": "Summarize this update: We closed Q3 with 14% growth...",
+    "expected": "Human-friendly summary"
+  },
+  {
+    "id": "report_workflow",
+    "input": "Create a weekly operational report template.",
+    "expected": "Structured template"
+  },
+  {
+    "id": "email_draft",
+    "input": "Draft an email announcing the new workflow changes.",
+    "expected": "Email format"
+  },
+  {
+    "id": "multi_step",
+    "input": "Generate a checklist for performance review and draft an announcement.",
+    "expected": "Two-part combined output"
+  }
+]
