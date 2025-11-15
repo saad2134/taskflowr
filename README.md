@@ -4,12 +4,11 @@
 
 <div align="center">
 
-<a href="https://shiksha-disha.vercel.app/" target="_blank">
-    <img  style="width:350px;" src="https://img.shields.io/badge/🚀_Access_the_Prototype_Here-Live-brightgreen?style=for-the-badge&labelColor=8000FF" alt="Access the Prototype Here"  />
+<a href="https://www.kaggle.com/code/saad2134/taskflowr-multi-agent-workflow-automation-system" target="_blank">
+    <img style="width:350px;" 
+         src="https://img.shields.io/badge/🚀_Access_the_Kaggle_Notebook-Link-brightgreen?style=for-the-badge&labelColor=20BEFF" 
+         alt="Access the Kaggle Notebook" />
 </a>
-
-![Phase](https://img.shields.io/badge/🛠️%20Phase-In%20Development-blue?style=for-the-badge)
-![Platforms](https://img.shields.io/badge/🌐%20Platforms-Web%20%7C%20Android*-28a745?style=for-the-badge)
 
 </div>
 
