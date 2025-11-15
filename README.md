@@ -251,7 +251,7 @@ cd deployment
 
 ## 🔰 Cover Image
 
-![thumbnail](https://github.com/user-attachments/assets/c152f34c-aca3-435e-a1de-282a120bb8a6)
+![thumbnail](https://github.com/user-attachments/assets/d7087e9e-4da3-4702-9e5c-30ce3cb79cff)
 
 ---
 
