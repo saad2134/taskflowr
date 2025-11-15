@@ -30,7 +30,7 @@
 - status updates
 - email/announcement drafting
 
-## 🔗 High-Level Flow
+### 🔗 High-Level Flow
 
 1. User sends an instruction
 2. Coordinator interprets and decomposes
@@ -94,7 +94,8 @@ Responsibilities:
 - Meeting notes
 - Tone adjustments
 - Creating announcements, instructions, SOP narratives
-- ADK features used:
+
+ADK features used:
 - Memory for tone preference
 - Text refinement
 - A2A communication with Coordinator
